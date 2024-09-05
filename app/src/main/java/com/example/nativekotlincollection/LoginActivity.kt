@@ -18,12 +18,12 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.loginButton.setOnClickListener(View.OnClickListener {
-            if (binding.username.text.toString() == "user" && binding.password.text.toString() == "1234"){
+        binding.loginButton.setOnClickListener {
+            if (binding.username.text.toString() == "user" && binding.password.text.toString() == "1234") {
                 Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "Login Failed!", Toast.LENGTH_SHORT).show()
             }
-        })
+        }
     }
 }
